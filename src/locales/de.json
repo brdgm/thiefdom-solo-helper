@@ -12,6 +12,20 @@
       "title": "Gilden",
       "playerColor": "Deine Gilde",
       "botColor": "Gegnerische Gilde"
+    },
+    "setup": {
+      "title": "Aufbau",
+      "gameBoard": "Bereite das Spiel wie ein 2-Spieler-Spiel vor.",
+      "playerBoard": "Wie üblich nimmst du ein Spielertableau und die Materialien in der Farbe deiner Gilde . Lege jedoch das Planungsplättchen Nr. 4 zurück in die Schachtel.",
+      "rivalThieves": "Lege 3 gegnerische Diebe neben den Spielplan.",
+      "draftEquipment": "Um Ausrüstungen auszuwählen, ziehe zuerst 3 Karten vom Deck und behalte 1 davon. Ziehe nun 2 Karten vom Deck, behalte wieder 1 und dann ziehe noch eine weitere Karte vom Deck. Von den 3 Ausrüstungenn kannst du nun 0–2 kaufen und sie beliebig unter deinen Dieben verteilen.",
+      "placeHideout": "Dann platziere deinen Versteckmarker."
+    },
+    "ruleChanges": {
+      "title": "Regeländerungen im Solospiel",
+      "townsfolkMovement": "Die Bewegungen der Stadtbewohner und der gegnerischen Diebe werden von der Applikation bestimmt.",
+      "enterLocationRival": "Wenn du einen Ort mit einem gegnerischen Dieb betrittst, <b>verlierst du 1 SP</b> pro gegnerischen Dieb an diesem Ort.",
+      "getArrested": "Wenn du in einem Solospiel verhaftet wirst, werden die Waren <b>abgeworfen</b> und nicht in den Kerker gelegt."
     }
   },
   "notfound": {

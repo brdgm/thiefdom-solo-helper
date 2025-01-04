@@ -12,6 +12,20 @@
       "title": "Guilds",
       "playerColor": "Your Guild",
       "botColor": "Rival Guild"
+    },
+    "setup": {
+      "title": "Setup",
+      "gameBoard": "Set up the game like a 2-player game. You don't need the patrol boards.",
+      "playerBoard": "As usual, take a player board and the materials in the color of your guild. However, return planning token #4 back to the box.",
+      "rivalThieves": "Place 3 rival thieves next to the board.",
+      "draftEquipment": "To draft equipment, first draw 3 cards, pick 1 of them, then draw 2 cards, again keep 1, then draw another single card from the deck. From the 3 equipment, you can now buy 0–2 equipment and distribute it among your thieves as you wish.",
+      "placeHideout": "Then, place your hideout."
+    },
+    "ruleChanges": {
+      "title": "Rule Changes in Solo Game",
+      "townsfolkMovement": "The townsfolk and rival thief movements are controlled by the application.",
+      "enterLocationRival": "If you enter a location with a rival thief, you <b>lose 1 VP</b> per rival thief in that location.",
+      "getArrested": "If you get arrested in a solo game, goods are <b>discarded</b> and not placed in the dungeon."
     }
   },
   "notfound": {
