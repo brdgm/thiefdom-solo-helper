@@ -54,7 +54,7 @@
   },
   "endOfGame": {
     "title": "End of Game",
-    "finalScore": "Count your VP and check against this table to see how well you did:",
+    "finalScore": "Add up your VP and check against this table to see how well you did:",
     "vp": "{count}+ VP"
   },
   "sideBar": {

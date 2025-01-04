@@ -5,6 +5,11 @@
     {{t('turnBot.title')}}
   </h1>
 
+  <template v-if="currentCard">
+    <TownsfolkMovement :currentCard="currentCard"/>
+    <RivalLocation :currentCard="currentCard" :playerColor="navigationState.playerColor"/>
+  </template>
+
   <button class="btn btn-primary btn-lg mt-4 me-2" @click="next()">
     {{t('action.next')}}
   </button>
@@ -23,11 +28,16 @@ import { useRoute } from 'vue-router'
 import SideBar from '@/components/turn/SideBar.vue'
 import NavigationState from '@/util/NavigationState'
 import DebugInfo from '@/components/turn/DebugInfo.vue'
+import Card from '@/services/Card'
+import TownsfolkMovement from '@/components/turn/TownsfolkMovement.vue'
+import RivalLocation from '@/components/turn/RivalLocation.vue'
 
 export default defineComponent({
   name: 'TurnBot',
   components: {
     FooterButtons,
+    TownsfolkMovement,
+    RivalLocation,
     SideBar,
     DebugInfo
   },
@@ -47,6 +57,9 @@ export default defineComponent({
         return `/round/${this.round}/turn/${this.turn-1}/player`
       }
       return `/round/${this.round}/start`
+    },
+    currentCard() : Card|undefined {
+      return this.navigationState.cardDeck.currentCard
     }
   },
   methods: {
