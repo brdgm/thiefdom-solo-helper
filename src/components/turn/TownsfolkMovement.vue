@@ -10,7 +10,7 @@
         <div class="number">2</div>
       </div>
       <div class="arrow">
-        <img src="@/assets/icons/arrow-right.svg" class="icon"/>
+        <AppIcon name="arrow-right" extension="svg" class="icon"/>
       </div>
       <div class="lantern">
         <AppIcon name="lantern" class="icon"/>
@@ -24,7 +24,7 @@
       </div>
       <div class="arrow">
         <div class="number">2x</div>
-        <img src="@/assets/icons/arrow-right.svg" class="icon"/>
+        <AppIcon name="arrow-right" extension="svg" class="icon"/>
       </div>
       <div class="lantern">
         <AppIcon name="lantern" class="icon"/>
@@ -35,8 +35,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { PropType } from 'vue'
+import { defineComponent, PropType } from 'vue'
 import Card from '@/services/Card'
 import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import AppIcon from '../structure/AppIcon.vue'

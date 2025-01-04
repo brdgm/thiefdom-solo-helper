@@ -6,7 +6,7 @@
         <div class="number">{{currentCard.carriage ? 4 : 3}}</div>
       </div>
       <div class="arrow">
-        <img src="@/assets/icons/arrow-right.svg" class="icon"/>
+        <AppIcon name="arrow-right" extension="svg" class="icon"/>
       </div>
       <div class="location">
         <AppIcon type="location" :name="location" class="icon"/>
@@ -19,8 +19,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { PropType } from 'vue'
+import { defineComponent, PropType } from 'vue'
 import Card from '@/services/Card'
 import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import Location from '@/services/enum/Location'
