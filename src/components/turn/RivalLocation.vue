@@ -11,6 +11,9 @@
       <div class="location">
         <AppIcon type="location" :name="location" class="icon"/>
       </div>
+      <div class="cityBoard">
+        {{cityBoard}}
+      </div>
     </div>
   </div>
 </template>
@@ -86,6 +89,9 @@ export default defineComponent({
   align-items: center;
   .icon {
     height: 100px;
+    @media (max-width: 600px) {
+      height: 75px;
+    }
   }
   .number {
     padding: 2px;
@@ -101,18 +107,35 @@ export default defineComponent({
   border-radius: 8px;
   margin: 10px;
   padding: 3px;
+  .icon {
+    width: 60px;
+    @media (max-width: 600px) {
+      width: 45px;
+    }
+  }
 }
 .arrow {
   position: relative;
   .icon {
     width: 70px;
+    @media (max-width: 600px) {
+      width: 50px;
+    }
   }
-  .number {
-    position: absolute;
-    font-weight: bold;
+}
+.cityBoard {
+  font-weight: bold;
+  font-size: 30px;
+  background-color: #1b586c;
+  color: #99cbe3;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  align-content: center;
+  @media (max-width: 600px) {
     font-size: 24px;
-    left: 10px;
-    top: -15px;
+    height: 40px;
+    width: 40px;
   }
 }
 </style>

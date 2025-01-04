@@ -31,7 +31,7 @@
       </div>
     </div>
   </div>
-  <CompassNavigation :orientation="orientation" :direction="direction"/>
+  <CompassNavigation :orientation="orientation" :direction="direction" class="mt-3 mb-2"/>
 </template>
 
 <script lang="ts">
@@ -85,6 +85,9 @@ export default defineComponent({
   align-items: center;
   .icon {
     height: 100px;
+    @media (max-width: 600px) {
+      height: 75px;
+    }
   }
   .number {
     padding: 2px;
@@ -98,12 +101,18 @@ export default defineComponent({
 .lantern {
   .icon {
     height: 80px;
+    @media (max-width: 600px) {
+      height: 60px;
+    }
   }
 }
 .arrow {
   position: relative;
   .icon {
     width: 70px;
+    @media (max-width: 600px) {
+      width: 50px;
+    }
   }
   .number {
     position: absolute;
@@ -111,6 +120,11 @@ export default defineComponent({
     font-size: 24px;
     left: 10px;
     top: -15px;
+    @media (max-width: 600px) {
+      font-size: 20px;
+      left: 5px;
+      top: -15px;
+    }
   }
 }
 </style>
