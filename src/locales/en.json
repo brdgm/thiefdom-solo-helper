@@ -28,6 +28,10 @@
       "getArrested": "If you get arrested in a solo game, goods are <b>discarded</b> and not placed in the dungeon."
     }
   },
+  "sideBar": {
+    "round": "Round {round}",
+    "turn": "Turn {turn}"
+  },
   "notfound": {
     "title": "Not Found"
   },

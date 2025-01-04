@@ -28,6 +28,10 @@
       "getArrested": "Wenn du in einem Solospiel verhaftet wirst, werden die Waren <b>abgeworfen</b> und nicht in den Kerker gelegt."
     }
   },
+  "sideBar": {
+    "round": "Runde {round}",
+    "turn": "Zug {turn}"
+  },
   "notfound": {
     "title": "Nicht Gefunden"
   },

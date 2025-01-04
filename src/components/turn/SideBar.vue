@@ -1,6 +1,7 @@
 <template>
   <div class="sidebar">
-    <div class="fw-bold">{{t('sideBar.round', {round})}}</div>
+    <div>{{t('sideBar.round', {round})}}</div>
+    <div>{{t('sideBar.turn', {turn})}}</div>
   </div>
 </template>
 
@@ -26,7 +27,10 @@ export default defineComponent({
   computed: {
     round() : number {
       return this.navigationState.round
-    }
+    },
+    turn() : number {
+      return this.navigationState.turn
+    },
   }
 })
 </script>
@@ -34,7 +38,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .sidebar {
   float: right;
-  width: 145px;
+  width: 115px;
   margin-left: 15px;
   margin-bottom: 10px;
   margin-right: -12px;
@@ -44,6 +48,7 @@ export default defineComponent({
   border-bottom-left-radius: 15px;
   @media (max-width: 600px) {
     font-size: 0.8rem;
+    width: 95px;
   }
 }
 </style>

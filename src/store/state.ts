@@ -38,6 +38,12 @@ export interface Setup {
 
 export interface Round {
   round: number
+  turns: Turn[]
+}
+export interface Turn {
+  round: number
+  turn: number
+  cardDeck: CardDeckPersistence
 }
 
 export interface CardDeckPersistence {
