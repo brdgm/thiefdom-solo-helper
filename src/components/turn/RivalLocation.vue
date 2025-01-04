@@ -6,7 +6,7 @@
         <div class="number">{{currentCard.carriage ? 4 : 3}}</div>
       </div>
       <div class="arrow">
-        <img src="@/assets/arrow-right.svg" class="icon"/>
+        <img src="@/assets/icons/arrow-right.svg" class="icon"/>
       </div>
       <div class="location">
         <AppIcon type="location" :name="location" class="icon"/>
@@ -96,6 +96,7 @@ export default defineComponent({
   .number {
     padding: 2px;
     background-color: #a2763d;
+    color: #fff;
     width: 30px;
     text-align: center;
     font-weight: bold;

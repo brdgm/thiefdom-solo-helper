@@ -10,7 +10,7 @@
         <div class="number">2</div>
       </div>
       <div class="arrow">
-        <img src="@/assets/arrow-right.svg" class="icon"/>
+        <img src="@/assets/icons/arrow-right.svg" class="icon"/>
       </div>
       <div class="lantern">
         <AppIcon name="lantern" class="icon"/>
@@ -24,7 +24,7 @@
       </div>
       <div class="arrow">
         <div class="number">2x</div>
-        <img src="@/assets/arrow-right.svg" class="icon"/>
+        <img src="@/assets/icons/arrow-right.svg" class="icon"/>
       </div>
       <div class="lantern">
         <AppIcon name="lantern" class="icon"/>
@@ -92,6 +92,7 @@ export default defineComponent({
   .number {
     padding: 2px;
     background-color: #a2763d;
+    color: #fff;
     width: 30px;
     text-align: center;
     font-weight: bold;
