@@ -29,7 +29,8 @@
     }
   },
   "roundStart": {
-    "title": "Planning Phase"
+    "title": "Planning Phase",
+    "planningTokens": "Plan the order in which the thieves will perform the actions by placing the planning tokens face up on your player board."
   },
   "turnPlayer": {
     "title": "Player",
@@ -39,10 +40,22 @@
     "title": "Townsfolk and Rivals"
   },
   "roundEnd": {
-    "title": "Administration Phase"
+    "title": "Administration Phase",
+    "roundMarker": "Advance the <b>round marker</b>.",
+    "staminaMarker": "Return the <b>stamina marker</b>.",
+    "alleySpace": "Receive 1 VP for each thief you have on an <b>alley space</b>.",
+    "round24": {
+      "title": "Additionally:",
+      "bagTokens": "Flip the <b>bag tokens</b> of the nobles on the loot board to the side with the goods shown.",
+      "lootBoard": "Refill the <b>loot board</b> with badges from the supply, back to one badge per designated slot.",
+      "smugglingMission": "Place 1 <b>smuggling mission</b> from the deck on each smugglers’ designated slot, if it’s empty.",
+      "equipmentCards": "The <b>equipment cards</b> on display are discarded and replaced with 4 cards from the deck."
+    }
   },
   "endOfGame": {
-    "title": "End of Game"
+    "title": "End of Game",
+    "finalScore": "Count your VP and check against this table to see how well you did:",
+    "vp": "{count}+ VP"
   },
   "sideBar": {
     "round": "Round {round}",

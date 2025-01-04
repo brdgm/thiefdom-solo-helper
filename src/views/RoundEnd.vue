@@ -5,7 +5,21 @@
     {{t('roundEnd.title')}}
   </h1>
 
-  <p>...</p>
+  <ol>
+    <li v-html="t('roundEnd.roundMarker')"></li>
+    <li v-html="t('roundEnd.staminaMarker')"></li>
+    <li v-html="t('roundEnd.alleySpace')"></li>
+  </ol>
+
+  <template v-if="isRound2Or4">
+    <p v-html="t('roundEnd.round24.title')"></p>
+    <ol>
+      <li v-html="t('roundEnd.round24.bagTokens')"></li>
+      <li v-html="t('roundEnd.round24.lootBoard')"></li>
+      <li v-html="t('roundEnd.round24.smugglingMission')"></li>
+      <li v-html="t('roundEnd.round24.equipmentCards')"></li>
+    </ol>
+  </template>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
@@ -42,6 +56,9 @@ export default defineComponent({
   computed: {
     backButtonRouteTo() : string {
       return `/round/${this.round}/turn/6/${this.navigationState.lastPlayer}`
+    },
+    isRound2Or4() : boolean {
+      return this.round == 2 || this.round == 4
     }
   },
   methods: {

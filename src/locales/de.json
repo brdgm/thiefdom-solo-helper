@@ -29,7 +29,8 @@
     }
   },
   "roundStart": {
-    "title": "Planungsphase"
+    "title": "Planungsphase",
+    "planningTokens": "Plane die Reihenfolge, in der die Diebe die Aktionen ausführen werden, indem du die Planungsplättchen offen auf dein Spielertableau legst."
   },
   "turnPlayer": {
     "title": "Spieler",
@@ -39,10 +40,22 @@
     "title": "Stadtbewohner und Gegner"
   },
   "roundEnd": {
-    "title": "Verwaltungsphase"
+    "title": "Verwaltungsphase",
+    "roundMarker": "Setze den <b>Rundenmarker</b> auf die nächste Stelle.",
+    "staminaMarker": "Lege den <b>Ausdauermarker</b> zurück.",
+    "alleySpace": "Erhalte 1 SP für jeden Dieb auf einem <b>Gassenfeld</b>.",
+    "round24": {
+      "title": "Außerdem:",
+      "bagTokens": "Drehe die <b>Taschenplättchen</b> der Adligen auf dem Beutetableau auf die Seite mit den abgebildeten Waren.",
+      "lootBoard": "Fülle das <b>Beutetableau</B> wieder mit Abzeichen aus dem Vorrat auf, und zwar ein Abzeichen pro vorgesehenem Platz.",
+      "smugglingMission": "Lege jeweils 1 <b>Schmuggelauftrag</b> vom Stapel auf die leeren Felder der Schmugglerinnen.",
+      "equipmentCards": "Die ausliegenden <b>Ausrüstungskarten</b> werden abgeworfen und durch 4 Karten vom Deck ersetzt."
+    }
   },
   "endOfGame": {
-    "title": "Spielende"
+    "title": "Spielende",
+    "finalScore": "Zähle deine SP zusammen und prüfe anhand dieser Tabelle, wie gut die abgeschnitten hast:",
+    "vp": "{count}+ SP"
   },
   "sideBar": {
     "round": "Runde {round}",

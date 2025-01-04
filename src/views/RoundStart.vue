@@ -5,7 +5,7 @@
     {{t('roundStart.title')}}
   </h1>
 
-  <p>...</p>
+  <p v-html="t('roundStart.planningTokens')" class="mt-4 mb-4"></p>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
