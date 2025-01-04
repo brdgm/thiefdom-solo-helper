@@ -28,6 +28,22 @@
       "getArrested": "If you get arrested in a solo game, goods are <b>discarded</b> and not placed in the dungeon."
     }
   },
+  "roundStart": {
+    "title": "Planning Phase"
+  },
+  "turnPlayer": {
+    "title": "Player",
+    "takeTurn": "Take your turn."
+  },
+  "turnBot": {
+    "title": "Townsfolk and Rivals"
+  },
+  "roundEnd": {
+    "title": "Administration Phase"
+  },
+  "endOfGame": {
+    "title": "End of Game"
+  },
   "sideBar": {
     "round": "Round {round}",
     "turn": "Turn {turn}"

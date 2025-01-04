@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
     <div>{{t('sideBar.round', {round})}}</div>
-    <div>{{t('sideBar.turn', {turn})}}</div>
+    <div v-if="turn > 0">{{t('sideBar.turn', {turn})}}</div>
   </div>
 </template>
 

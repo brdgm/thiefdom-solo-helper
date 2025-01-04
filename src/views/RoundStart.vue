@@ -2,16 +2,14 @@
   <SideBar :navigationState="navigationState"/>
 
   <h1>
-    {{t('turnPlayer.title')}}
+    {{t('roundStart.title')}}
   </h1>
 
-  <p v-html="t('turnPlayer.takeTurn')" class="mt-4 mb-4"></p>
+  <p>...</p>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
   </button>
-
-  <DebugInfo :navigationState="navigationState"/>
 
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
@@ -21,17 +19,15 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
-import { Turn, useStateStore } from '@/store/state'
+import { useStateStore } from '@/store/state'
 import SideBar from '@/components/turn/SideBar.vue'
 import NavigationState from '@/util/NavigationState'
-import DebugInfo from '@/components/turn/DebugInfo.vue'
 
 export default defineComponent({
-  name: 'TurnPlayer',
+  name: 'RoundStart',
   components: {
     FooterButtons,
-    SideBar,
-    DebugInfo
+    SideBar
   },
   setup() {
     const { t } = useI18n()
@@ -45,31 +41,15 @@ export default defineComponent({
   },
   computed: {
     backButtonRouteTo() : string {
-      if (this.turn > 1) {
-        return `/round/${this.round}/turn/${this.turn-1}/bot`
+      if (this.round > 1) {
+        return `/round/${this.round - 1}/administration`
       }
-      return `/round/${this.round}/start`
+      return ''
     }
   },
   methods: {
     next() : void {
-      const turn : Turn = {
-        round: this.round,
-        turn: this.turn,
-        cardDeck: this.navigationState.cardDeck.toPersistence()
-      }
-      this.state.storeTurn(turn)
-      if (this.turn == 6) {
-        if (this.round == 6) {
-          this.$router.push(`/endOfGame`)
-        }
-        else {
-          this.$router.push(`/round/${this.round}/end`)
-        }
-      }
-      else {
-        this.$router.push(`/round/${this.round}/turn/${this.turn+1}/bot`)
-      }
+      this.$router.push(`/round/${this.round}/turn/1/${this.navigationState.startPlayer}`)
     }
   }
 })

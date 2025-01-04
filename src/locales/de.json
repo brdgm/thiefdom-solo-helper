@@ -28,6 +28,22 @@
       "getArrested": "Wenn du in einem Solospiel verhaftet wirst, werden die Waren <b>abgeworfen</b> und nicht in den Kerker gelegt."
     }
   },
+  "roundStart": {
+    "title": "Planungsphase"
+  },
+  "turnPlayer": {
+    "title": "Spieler",
+    "takeTurn": "Führe deinen Zug aus."
+  },
+  "turnBot": {
+    "title": "Stadtbewohner und Gegner"
+  },
+  "roundEnd": {
+    "title": "Verwaltungsphase"
+  },
+  "endOfGame": {
+    "title": "Spielende"
+  },
   "sideBar": {
     "round": "Runde {round}",
     "turn": "Zug {turn}"

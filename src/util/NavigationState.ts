@@ -11,11 +11,22 @@ export default class NavigationState {
   readonly turn : number
   readonly player : Player
   readonly playerColor : PlayerColor
+  readonly startPlayer : Player
+  readonly lastPlayer : Player
   readonly cardDeck : CardDeck
 
   constructor(route: RouteLocation, state: State) {    
     this.round = getIntRouteParam(route, 'round')
     this.turn = getIntRouteParam(route, 'turn')
+
+    if (isEven(this.round)) {
+      this.startPlayer = Player.BOT
+      this.lastPlayer = Player.PLAYER
+    }
+    else {
+      this.startPlayer = Player.PLAYER
+      this.lastPlayer = Player.BOT
+    }
 
     if ((isOdd(this.round) && isEven(this.turn)) || (isEven(this.round) && isOdd(this.turn))) {
       this.player = Player.BOT

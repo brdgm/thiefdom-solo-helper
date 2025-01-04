@@ -46,7 +46,7 @@ export default defineComponent({
   },
   methods: {
     setupBot() : void {
-      this.$router.push('/round/1/turn/1/player')
+      this.$router.push('/round/1/start')
     }
   }
 })
