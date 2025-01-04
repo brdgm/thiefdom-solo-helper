@@ -6,16 +6,16 @@ describe('services/CardDeck', () => {
     const deck = CardDeck.new()
 
     expect(deck.currentCard, 'currentCard').to.undefined
-    expect(deck.pile.length, 'pile').to.eq(1)
+    expect(deck.pile.length, 'pile').to.eq(3)
     expect(deck.discard.length, 'discard').to.eq(0)
 
     const persistence = deck.toPersistence()
-    expect(persistence.pile.length, 'pile').to.eq(1)
+    expect(persistence.pile.length, 'pile').to.eq(3)
     expect(persistence.discard.length, 'discard').to.eq(0)
   })
-/*
+
   it('draw', () => {
-    const deck = CardDeck.fromPersistence({pile: [1,2], discard: []}, WarCards.get)
+    const deck = CardDeck.fromPersistence({pile: [1,2], discard: []})
 
     expect(deck.currentCard, 'currentCard').to.undefined
     expect(deck.pile.length, 'pile').to.eq(2)
@@ -40,7 +40,7 @@ describe('services/CardDeck', () => {
   })
 
   it('shuffle', () => {
-    const deck = CardDeck.fromPersistence({pile: [1,2,3], discard: []}, WarCards.get)
+    const deck = CardDeck.fromPersistence({pile: [1,2,3], discard: []})
 
     expect(deck.currentCard, 'currentCard').to.undefined
     expect(deck.pile.length, 'pile').to.eq(3)
@@ -59,5 +59,5 @@ describe('services/CardDeck', () => {
     expect(deck.pile.length, 'pile').to.eq(2)
     expect(deck.discard.length, 'discard').to.eq(1)
   })
-    */
+
 })

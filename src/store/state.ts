@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { name } from '@/../package.json'
-import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import PlayerColor from '@/services/enum/PlayerColor'
 
 export const useStateStore = defineStore(`${name}.state`, {
   state: () => {
@@ -8,7 +8,7 @@ export const useStateStore = defineStore(`${name}.state`, {
       language: 'en',
       baseFontSize: 1.0,
       setup: {
-        difficultyLevel: DifficultyLevel.NORMAL
+        playerColors: [PlayerColor.YELLOW, PlayerColor.PURPLE]
       },
       rounds: []
     } as State
@@ -32,7 +32,7 @@ export interface State {
   rounds: Round[]
 }
 export interface Setup {
-  difficultyLevel: DifficultyLevel
+  playerColors: PlayerColor[]
   debugMode?: boolean
 }
 

@@ -1,5 +1,4 @@
-import DifficultyLevel from '@/services/enum/DifficultyLevel'
-import Player from '@/services/enum/Player'
+import PlayerColor from '@/services/enum/PlayerColor'
 import { Round, State } from '@/store/state'
 
 export default function (params?: MockStateParams) : State {  
@@ -7,15 +6,13 @@ export default function (params?: MockStateParams) : State {
     language: 'en',
     baseFontSize: 1,
     setup: {
-      difficultyLevel: params?.difficultyLevel ?? DifficultyLevel.NORMAL,
-      startPlayer: params?.startPlayer
+      playerColors: params?.playerColors ?? [PlayerColor.YELLOW, PlayerColor.PURPLE]
     },
     rounds: params?.rounds ?? []
   }
 }
 
 export interface MockStateParams {
-  difficultyLevel?: DifficultyLevel,
-  startPlayer?: Player,
+  playerColors?: PlayerColor[],
   rounds?: Round[]
 }

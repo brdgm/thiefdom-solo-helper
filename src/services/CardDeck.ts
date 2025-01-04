@@ -5,7 +5,7 @@ import Card from './Card'
 import Cards from './Cards'
 
 /**
- * Manages the Automa cards.
+ * Manages the cards.
  */
 export default class CardDeck {
 
