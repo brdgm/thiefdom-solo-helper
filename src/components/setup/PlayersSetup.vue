@@ -5,7 +5,7 @@
     <div class="col-5 col-md-3">
       <label for="playerCount" class="form-label">{{t('setup.players.playerColor')}}</label>
     </div>
-    <div class="col-5 col-md-3">
+    <div class="col-7 col-md-9">
       <PlayerColorPicker :model-value="playerColors[0]" @update:model-value="color => playerColorChanged(0, color)"/>
     </div>
   </div>  
@@ -14,7 +14,7 @@
     <div class="col-5 col-md-3">
       <label for="playerCount" class="form-label">{{t('setup.players.botColor')}}</label>
     </div>
-    <div class="col-5 col-md-3">
+    <div class="col-7 col-md-9">
       <PlayerColorPicker :model-value="playerColors[1]" @update:model-value="color => playerColorChanged(1, color)"/>
     </div>
   </div>  
