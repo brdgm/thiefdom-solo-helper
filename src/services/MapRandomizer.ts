@@ -12,7 +12,7 @@ import getAllEnumValues from '@brdgm/brdgm-commons/src/util/enum/getAllEnumValue
  */
 export default class MapRandomizer {
 
-  private _cityBoardSetup
+  private readonly _cityBoardSetup
 
   private constructor(cityBoardSetup : CityBoardSetup[]) {
     this._cityBoardSetup = ref(cityBoardSetup)
