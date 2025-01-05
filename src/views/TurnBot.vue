@@ -7,6 +7,7 @@
 
   <template v-if="currentCard">
     <TownsfolkMovement :currentCard="currentCard" :movementRoll="navigationState.movementRoll"/>
+    <hr/>
     <RivalLocation :currentCard="currentCard" :locationRoll="navigationState.locationRoll" :playerColor="navigationState.playerColor"/>
   </template>
 

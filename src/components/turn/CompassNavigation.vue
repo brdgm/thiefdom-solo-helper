@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="navigation">
     <svg class="compass" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
       <g transform="translate(100.66583,-852.27527)">
         <g>
@@ -59,6 +59,7 @@
           L53.445,83.187L89.883,75.94z"/>
       </g>
     </svg>
+    <div class="instruction small" v-html="t('turnBot.compassInstruction')"></div>
   </div>
 </template>
 
@@ -88,8 +89,14 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .compass {
-  width: 200px;
+  width: 170px;
+  margin-right: 20px;
   .inner {
     path:nth-child(odd) {
       fill:#0f567c;fill-opacity:1;fill-rule:evenodd;stroke:#0f567c;stroke-width:2.22388315px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;
@@ -115,5 +122,11 @@ export default defineComponent({
   .ring {
     opacity:1;fill:#809fbc;fill-opacity:1;stroke:#809fbc;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;
   }
+  @media (max-width: 600px) {
+    width: 150px;
+  }
+}
+.instruction {
+  max-width: 400px;
 }
 </style>

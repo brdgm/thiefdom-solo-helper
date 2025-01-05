@@ -29,7 +29,7 @@
     }
   },
   "roundStart": {
-    "title": "Planungsphase",
+    "title": "Planung",
     "planningTokens": "Plane die Reihenfolge, in der die Diebe die Aktionen ausführen werden, indem du die Planungsplättchen offen auf dein Spielertableau legst."
   },
   "turnPlayer": {
@@ -37,10 +37,11 @@
     "takeTurn": "Führe deinen Zug aus: Planungsplättchen Nr. {number}."
   },
   "turnBot": {
-    "title": "Stadtbewohner"
+    "title": "Stadtbewohner",
+    "compassInstruction": "Bewege die Figur in die angegebene Richtung. Wenn sie sich aus irgendeinem Grund nicht in diese Richtung bewegen kann (Mauer, Haus/Ort, Sackgasse oder weil die Wache nicht rückwärts gehen kann), folge einer alternativen Richtung in Reihenfolge des Pfeils. Schwenke auf die ursprünglich angegebene Richtung zurück wann immer möglich."
   },
   "roundEnd": {
-    "title": "Verwaltungsphase",
+    "title": "Verwaltung",
     "roundMarker": "Setze den <b>Rundenmarker</b> auf die nächste Stelle.",
     "staminaMarker": "Lege den <b>Ausdauermarker</b> zurück.",
     "alleySpace": "Erhalte 1 SP für jeden Dieb auf einem <b>Gassenfeld</b>.",

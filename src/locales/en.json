@@ -29,7 +29,7 @@
     }
   },
   "roundStart": {
-    "title": "Planning Phase",
+    "title": "Planning",
     "planningTokens": "Plan the order in which the thieves will perform the actions by placing the planning tokens face up on your player board."
   },
   "turnPlayer": {
@@ -37,10 +37,11 @@
     "takeTurn": "Take your turn: Planning Marker #{number}."
   },
   "turnBot": {
-    "title": "Townsfolk"
+    "title": "Townsfolk",
+    "compassInstruction": "Move the figure in the indicated direction. If it cannot move in this direction (wall, house/location, dead-end street or because the guard cannot move backwards), move it in alternative directions following the arrow. Fall back to the indicated direction whenever possible."
   },
   "roundEnd": {
-    "title": "Administration Phase",
+    "title": "Administration",
     "roundMarker": "Advance the <b>round marker</b>.",
     "staminaMarker": "Return the <b>stamina marker</b>.",
     "alleySpace": "Receive 1 VP for each thief you have on an <b>alley space</b>.",
