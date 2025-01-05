@@ -42,7 +42,7 @@ export default defineComponent({
   computed: {
     backButtonRouteTo() : string {
       if (this.round > 1) {
-        return `/round/${this.round - 1}/administration`
+        return `/round/${this.round - 1}/end`
       }
       return ''
     }

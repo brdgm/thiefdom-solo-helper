@@ -21,7 +21,6 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import Card from '@/services/Card'
-import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import Location from '@/services/enum/Location'
 import PlayerColor from '@/services/enum/PlayerColor'
 import AppIcon from '../structure/AppIcon.vue'
@@ -31,13 +30,13 @@ export default defineComponent({
   components: {
     AppIcon
   },
-  setup() {
-    const locationSelection = rollDice(8)
-    return { locationSelection }
-  },
   props: {
     currentCard: {
       type: Object as PropType<Card>,
+      required: true
+    },
+    locationRoll: {
+      type: Number,
       required: true
     },
     playerColor: {
@@ -47,7 +46,7 @@ export default defineComponent({
   },
   computed: {
     location() : Location {
-      switch (this.locationSelection) {
+      switch (this.locationRoll) {
         case 1: return Location.TAVERN
         case 2: return Location.TAVERN
         case 3: return Location.MARKET
@@ -60,7 +59,7 @@ export default defineComponent({
       }
     },
     cityBoard() : number {
-      switch (this.locationSelection) {
+      switch (this.locationRoll) {
         case 1: return 8
         case 2: return 2
         case 3: return 3

@@ -21,10 +21,9 @@ export const useStateStore = defineStore(`${name}.state`, {
       let round = this.rounds.find(item => item.round === turn.round)
       if (!round) {
         round = { round: turn.round, turns: [] }
-        this.rounds = this.rounds.filter(item => item.round < turn.round)
         this.rounds.push(round)
       }
-      round.turns = round.turns.filter(item => item.turn < turn.turn)
+      round.turns = round.turns.filter(item => item.turn != turn.turn)
       round.turns.push(turn)
     }
   },
@@ -49,6 +48,8 @@ export interface Round {
 export interface Turn {
   round: number
   turn: number
+  movementRoll: number
+  locationRoll: number
   cardDeck: CardDeckPersistence
 }
 

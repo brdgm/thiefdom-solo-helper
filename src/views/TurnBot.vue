@@ -6,8 +6,8 @@
   </h1>
 
   <template v-if="currentCard">
-    <TownsfolkMovement :currentCard="currentCard"/>
-    <RivalLocation :currentCard="currentCard" :playerColor="navigationState.playerColor"/>
+    <TownsfolkMovement :currentCard="currentCard" :movementRoll="navigationState.movementRoll"/>
+    <RivalLocation :currentCard="currentCard" :locationRoll="navigationState.locationRoll" :playerColor="navigationState.playerColor"/>
   </template>
 
   <button class="btn btn-primary btn-lg mt-4 me-2" @click="next()">
@@ -67,7 +67,9 @@ export default defineComponent({
       const turn : Turn = {
         round: this.round,
         turn: this.turn,
-        cardDeck: this.navigationState.cardDeck.toPersistence()
+        cardDeck: this.navigationState.cardDeck.toPersistence(),
+        movementRoll: this.navigationState.movementRoll,
+        locationRoll: this.navigationState.locationRoll
       }
       this.state.storeTurn(turn)
       if (this.turn == 6) {

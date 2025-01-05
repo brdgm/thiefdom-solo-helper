@@ -37,7 +37,6 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import Card from '@/services/Card'
-import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import AppIcon from '../structure/AppIcon.vue'
 import CompassOrientation from '@/services/enum/CompassOrientation'
 import CompassDirection from '@/services/enum/CompassDirection'
@@ -49,24 +48,24 @@ export default defineComponent({
     AppIcon,
     CompassNavigation
   },
-  setup() {
-    const compassMovement = rollDice(8)
-    return { compassMovement }
-  },
   props: {
     currentCard: {
       type: Object as PropType<Card>,
+      required: true
+    },
+    movementRoll: {
+      type: Number,
       required: true
     }
   },
   computed: {
     orientation() : CompassOrientation {
       // north = 0, east = 1, south = 2, west = 3
-      return Math.ceil(this.compassMovement / 2) - 1
+      return Math.ceil(this.movementRoll / 2) - 1
     },
     direction() : CompassDirection {
       // left = 1, right = 0
-      return this.compassMovement % 2
+      return this.movementRoll % 2
     }
   }
 })

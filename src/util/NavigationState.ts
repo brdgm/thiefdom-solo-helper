@@ -1,9 +1,10 @@
-import { State } from '@/store/state'
+import { State, Turn } from '@/store/state'
 import { RouteLocation } from 'vue-router'
 import getIntRouteParam from '@brdgm/brdgm-commons/src/util/router/getIntRouteParam'
 import Player from '@/services/enum/Player'
 import PlayerColor from '@/services/enum/PlayerColor'
 import CardDeck from '@/services/CardDeck'
+import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 
 export default class NavigationState {
 
@@ -13,6 +14,9 @@ export default class NavigationState {
   readonly playerColor : PlayerColor
   readonly startPlayer : Player
   readonly lastPlayer : Player
+
+  readonly movementRoll : number
+  readonly locationRoll: number
   readonly cardDeck : CardDeck
 
   constructor(route: RouteLocation, state: State) {    
@@ -37,12 +41,30 @@ export default class NavigationState {
       this.playerColor = state.setup.playerColors[0]
     }
 
-    this.cardDeck = getCardDeckFromLastTurn(state, this.round, this.turn)
-    if (this.player == Player.BOT) {
-      this.cardDeck.draw()
+    const currentTurn = getCurrentTurn(state, this.round, this.turn)
+    if (currentTurn) {
+      this.cardDeck = CardDeck.fromPersistence(currentTurn.cardDeck)
+      this.movementRoll = currentTurn.movementRoll
+      this.locationRoll = currentTurn.locationRoll
+    }
+    else {
+      this.cardDeck = getCardDeckFromLastTurn(state, this.round, this.turn)
+      if (this.player == Player.BOT) {
+        this.cardDeck.draw()
+      }
+      this.movementRoll = rollDice(8)
+      this.locationRoll = rollDice(8)
     }
   }
 
+}
+
+function getCurrentTurn(state: State, round: number, turn: number) : Turn|undefined {
+  const roundData = state.rounds.find(item => item.round == round)
+  if (roundData) {
+    return roundData.turns.find(item => item.turn == turn)
+  }
+  return undefined
 }
 
 function getCardDeckFromLastTurn(state: State, round: number, turn: number) : CardDeck {

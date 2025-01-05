@@ -56,7 +56,9 @@ export default defineComponent({
       const turn : Turn = {
         round: this.round,
         turn: this.turn,
-        cardDeck: this.navigationState.cardDeck.toPersistence()
+        cardDeck: this.navigationState.cardDeck.toPersistence(),
+        movementRoll: this.navigationState.movementRoll,
+        locationRoll: this.navigationState.locationRoll,
       }
       this.state.storeTurn(turn)
       if (this.turn == 6) {
