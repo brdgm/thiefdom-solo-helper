@@ -59,7 +59,10 @@
           L53.445,83.187L89.883,75.94z"/>
       </g>
     </svg>
-    <div class="instruction small" v-html="t('turnBot.compassInstruction')"></div>
+    <div class="instruction small">
+      <button v-if="!showRules" class="btn btn-outline-secondary btn-sm" @click="showRules=true">{{t('turnBot.showCompassInstructions')}}</button>
+      <span v-if="showRules" v-html="t('turnBot.compassInstruction')"></span>
+    </div>
   </div>
 </template>
 
@@ -84,6 +87,11 @@ export default defineComponent({
       type: Number as PropType<CompassDirection>,
       required: true
     },
+  },
+  data() {
+    return {
+      showRules: false
+    }
   }
 })
 </script>
@@ -127,6 +135,8 @@ export default defineComponent({
   }
 }
 .instruction {
+  margin-top: 10px;
+  min-width: 250px;
   max-width: 400px;
 }
 </style>

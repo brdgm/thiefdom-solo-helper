@@ -38,6 +38,7 @@
   },
   "turnBot": {
     "title": "Stadtbewohner",
+    "showCompassInstructions": "Bewegungsregeln",
     "compassInstruction": "Bewege die Figur in die angegebene Richtung. Wenn sie sich aus irgendeinem Grund nicht in diese Richtung bewegen kann (Mauer, Haus/Ort, Sackgasse oder weil die Wache nicht rückwärts gehen kann), folge einer alternativen Richtung in Reihenfolge des Pfeils. Schwenke auf die ursprünglich angegebene Richtung zurück wann immer möglich."
   },
   "roundEnd": {

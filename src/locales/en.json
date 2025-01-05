@@ -38,6 +38,7 @@
   },
   "turnBot": {
     "title": "Townsfolk",
+    "showCompassInstructions": "Movement Rules",
     "compassInstruction": "Move the figure in the indicated direction. If it cannot move in this direction (wall, house/location, dead-end street or because the guard cannot move backwards), move it in alternative directions following the arrow. Fall back to the indicated direction whenever possible."
   },
   "roundEnd": {
