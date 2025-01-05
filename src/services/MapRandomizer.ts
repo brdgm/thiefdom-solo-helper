@@ -1,5 +1,6 @@
-import { shuffle } from 'lodash'
+import { isEqual, shuffle } from 'lodash'
 import { CityBoardSetup } from '@/store/state'
+import { ref } from 'vue'
 import CityBoard from './enum/CityBoard'
 import CityBoardSide from './enum/CityBoardSide'
 import CityBoardRotation from './enum/CityBoardRotation'
@@ -11,21 +12,21 @@ import getAllEnumValues from '@brdgm/brdgm-commons/src/util/enum/getAllEnumValue
  */
 export default class MapRandomizer {
 
-  private _cityBoardSetup : CityBoardSetup[]
+  private _cityBoardSetup
 
   private constructor(cityBoardSetup : CityBoardSetup[]) {
-    this._cityBoardSetup = cityBoardSetup
+    this._cityBoardSetup = ref(cityBoardSetup)
   }
 
-  public get cityBoardSetup() : readonly CityBoardSetup[] {
-    return this._cityBoardSetup
+  public get cityBoardSetup() : CityBoardSetup[] {
+    return this._cityBoardSetup.value
   }
 
   /**
    * Reset to tutorial setup.
    */
   public reset() : void {
-    this._cityBoardSetup = TUTORIAL_SETUP
+    this._cityBoardSetup.value = TUTORIAL_SETUP
   }
 
   /**
@@ -36,7 +37,7 @@ export default class MapRandomizer {
     const riverSide : CityBoard[] = shuffle(all.filter(board => isRiverSide(board)))
     const landSide : CityBoard[] = shuffle(all.filter(board => !isRiverSide(board)))
     const selected = [landSide[0], landSide[1], riverSide[0], landSide[2], landSide[3], riverSide[1]]
-    this._cityBoardSetup = selected.map(board => ({
+    this._cityBoardSetup.value = selected.map(board => ({
       board: board,
       side: randomEnum(CityBoardSide),
       rotation: isRiverSide(board) ? CityBoardRotation.THREE : randomEnum(CityBoardRotation)
@@ -44,10 +45,17 @@ export default class MapRandomizer {
   }
 
   /**
+   * @returns true if current setup is tutorial setup.
+   */
+  public isTutorialSetup() : boolean {
+    return isEqual(this._cityBoardSetup.value, TUTORIAL_SETUP)
+  }
+
+  /**
    * Gets persistence view of card deck.
    */
   public toPersistence() : CityBoardSetup[] {
-    return this._cityBoardSetup
+    return this._cityBoardSetup.value
   }
 
   /**

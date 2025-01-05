@@ -8,7 +8,7 @@
   <template v-if="currentCard">
     <TownsfolkMovement :currentCard="currentCard" :movementRoll="navigationState.movementRoll"/>
     <hr/>
-    <RivalLocation :currentCard="currentCard" :locationRoll="navigationState.locationRoll" :playerColor="navigationState.playerColor"/>
+    <RivalLocation :currentCard="currentCard" :navigationState="navigationState"/>
   </template>
 
   <button class="btn btn-primary btn-lg mt-4 me-2" @click="next()">

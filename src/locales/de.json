@@ -13,12 +13,20 @@
       "playerColor": "Deine Gilde",
       "botColor": "Gegnerische Gilde"
     },
+    "map": {
+      "title": "Stadtteile",
+      "arrange": "Lege die Stadtteile auf diese Weise aus:",
+      "randomize": "Zufällig",
+      "tutorialSetup": "Einführungsspiel"
+    },
     "setup": {
-      "title": "Aufbau",
+      "title": "Spielmaterial",
       "gameBoard": "Bereite das Spiel wie ein 2-Spieler-Spiel vor.",
       "playerBoard": "Wie üblich nimmst du ein Spielertableau und die Materialien in der Farbe deiner Gilde . Lege jedoch das Planungsplättchen Nr. 4 zurück in die Schachtel.",
       "rivalThieves": "Lege 3 gegnerische Diebe neben den Spielplan.",
-      "draftEquipment": "Um Ausrüstungen auszuwählen, ziehe zuerst 3 Karten vom Deck und behalte 1 davon. Ziehe nun 2 Karten vom Deck, behalte wieder 1 und dann ziehe noch eine weitere Karte vom Deck. Von den 3 Ausrüstungen kannst du nun 0–2 kaufen und sie beliebig unter deinen Dieben verteilen.",
+      "draftEquipment": "Um Ausrüstungen auszuwählen, ziehe zuerst 3 Karten vom Deck und behalte 1 davon. Ziehe nun 2 Karten vom Deck, behalte wieder 1 und dann ziehe noch eine weitere Karte vom Deck.",
+      "buyEquipment": "Von den 3 Ausrüstungen kannst du nun 0–2 kaufen und sie beliebig unter deinen Dieben verteilen.",
+      "gainEquipmentVP": "Erhalte die auf den gekauften Ausrüstungen abgebildeten SP.",
       "placeHideout": "Dann platziere deinen Versteckmarker."
     },
     "ruleChanges": {

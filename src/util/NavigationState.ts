@@ -20,7 +20,7 @@ export default class NavigationState {
   readonly movementRoll : number
   readonly locationRoll: number
   readonly cardDeck : CardDeck
-  readonly cityBoardSetup : readonly CityBoardSetup[]
+  readonly cityBoardSetup : CityBoardSetup[]
 
   constructor(route: RouteLocation, state: State) {    
     this.round = getIntRouteParam(route, 'round')
