@@ -2,6 +2,7 @@
   <h1>{{t('setup.title')}}</h1>
 
   <PlayersSetup/>
+  <MapSetup/>
 
   <h3 class="mt-3">{{t('setup.setup.title')}}</h3>
   <ul>
@@ -9,6 +10,10 @@
     <li v-html="t('setup.setup.playerBoard')"></li>
     <li v-html="t('setup.setup.rivalThieves')"></li>
     <li v-html="t('setup.setup.draftEquipment')"></li>
+    <ul>
+      <li v-html="t('setup.setup.buyEquipment')"></li>
+      <li v-html="t('setup.setup.gainEquipmentVP')"></li>
+    </ul>
     <li v-html="t('setup.setup.placeHideout')"></li>
   </ul>
 
@@ -32,12 +37,14 @@ import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import PlayersSetup from '@/components/setup/PlayersSetup.vue'
+import MapSetup from '@/components/setup/MapSetup.vue'
 
 export default defineComponent({
   name: 'SetupGame',
   components: {
     FooterButtons,
-    PlayersSetup
+    PlayersSetup,
+    MapSetup
   },
   setup() {
     const { t } = useI18n()

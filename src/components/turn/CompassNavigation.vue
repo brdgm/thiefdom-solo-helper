@@ -59,7 +59,7 @@
           L53.445,83.187L89.883,75.94z"/>
       </g>
     </svg>
-    <div class="instruction small">
+    <div class="instruction">
       <button v-if="!showRules" class="btn btn-outline-secondary btn-sm" @click="showRules=true">{{t('turnBot.showCompassInstructions')}}</button>
       <span v-if="showRules" v-html="t('turnBot.compassInstruction')"></span>
     </div>

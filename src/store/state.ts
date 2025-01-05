@@ -1,6 +1,9 @@
 import { defineStore } from 'pinia'
 import { name } from '@/../package.json'
 import PlayerColor from '@/services/enum/PlayerColor'
+import CityBoard from '@/services/enum/CityBoard'
+import CityBoardSide from '@/services/enum/CityBoardSide'
+import CityBoardRotation from '@/services/enum/CityBoardRotation'
 
 export const useStateStore = defineStore(`${name}.state`, {
   state: () => {
@@ -38,7 +41,13 @@ export interface State {
 }
 export interface Setup {
   playerColors: PlayerColor[]
+  cityBoardSetup?: CityBoardSetup[]
   debugMode?: boolean
+}
+export interface CityBoardSetup {
+  board: CityBoard
+  side: CityBoardSide
+  rotation: CityBoardRotation
 }
 
 export interface Round {
