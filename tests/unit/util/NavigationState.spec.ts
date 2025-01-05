@@ -29,6 +29,7 @@ describe('util/NavigationState', () => {
     expect(navigationState.startPlayer).to.eq(Player.PLAYER)
     expect(navigationState.lastPlayer).to.eq(Player.BOT)
     expect(navigationState.cardDeck.currentCard?.id).to.eq(2)
+    expect(navigationState.planningMarker).to.eq(2)
   })
 
   it('botTurn4', () => {
@@ -44,6 +45,7 @@ describe('util/NavigationState', () => {
     expect(navigationState.cardDeck.currentCard?.id).to.eq(1)
     expect(navigationState.movementRoll).to.eq(3)
     expect(navigationState.locationRoll).to.eq(4)
+    expect(navigationState.planningMarker).to.eq(2)
   })
 
   it('botTurn6', () => {
@@ -56,5 +58,6 @@ describe('util/NavigationState', () => {
     expect(navigationState.cardDeck.currentCard?.id).to.eq(3)
     expect(navigationState.movementRoll).to.greaterThan(0)
     expect(navigationState.locationRoll).to.greaterThan(0)
+    expect(navigationState.planningMarker).to.eq(3)
   })
 })

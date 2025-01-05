@@ -18,7 +18,7 @@
       "gameBoard": "Bereite das Spiel wie ein 2-Spieler-Spiel vor.",
       "playerBoard": "Wie üblich nimmst du ein Spielertableau und die Materialien in der Farbe deiner Gilde . Lege jedoch das Planungsplättchen Nr. 4 zurück in die Schachtel.",
       "rivalThieves": "Lege 3 gegnerische Diebe neben den Spielplan.",
-      "draftEquipment": "Um Ausrüstungen auszuwählen, ziehe zuerst 3 Karten vom Deck und behalte 1 davon. Ziehe nun 2 Karten vom Deck, behalte wieder 1 und dann ziehe noch eine weitere Karte vom Deck. Von den 3 Ausrüstungenn kannst du nun 0–2 kaufen und sie beliebig unter deinen Dieben verteilen.",
+      "draftEquipment": "Um Ausrüstungen auszuwählen, ziehe zuerst 3 Karten vom Deck und behalte 1 davon. Ziehe nun 2 Karten vom Deck, behalte wieder 1 und dann ziehe noch eine weitere Karte vom Deck. Von den 3 Ausrüstungen kannst du nun 0–2 kaufen und sie beliebig unter deinen Dieben verteilen.",
       "placeHideout": "Dann platziere deinen Versteckmarker."
     },
     "ruleChanges": {
@@ -34,7 +34,7 @@
   },
   "turnPlayer": {
     "title": "Spieler",
-    "takeTurn": "Führe deinen Zug aus."
+    "takeTurn": "Führe deinen Zug aus: Planungsplättchen Nr. {number}."
   },
   "turnBot": {
     "title": "Stadtbewohner"
@@ -47,7 +47,7 @@
     "round24": {
       "title": "Außerdem:",
       "bagTokens": "Drehe die <b>Taschenplättchen</b> der Adligen auf dem Beutetableau auf die Seite mit den abgebildeten Waren.",
-      "lootBoard": "Fülle das <b>Beutetableau</B> wieder mit Abzeichen aus dem Vorrat auf, und zwar ein Abzeichen pro vorgesehenem Platz.",
+      "lootBoard": "Fülle das Beutetableau wieder mit <b>Abzeichen</b> aus dem Vorrat auf, und zwar ein Abzeichen pro vorgesehenem Platz.",
       "smugglingMission": "Lege jeweils 1 <b>Schmuggelauftrag</b> vom Stapel auf die leeren Felder der Schmugglerinnen.",
       "equipmentCards": "Die ausliegenden <b>Ausrüstungskarten</b> werden abgeworfen und durch 4 Karten vom Deck ersetzt."
     }

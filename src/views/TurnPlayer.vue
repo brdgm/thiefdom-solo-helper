@@ -5,7 +5,7 @@
     {{t('turnPlayer.title')}}
   </h1>
 
-  <p v-html="t('turnPlayer.takeTurn')" class="mt-4 mb-4"></p>
+  <p v-html="t('turnPlayer.takeTurn', {number:navigationState.planningMarker})" class="mt-4 mb-4"></p>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}

@@ -14,6 +14,7 @@ export default class NavigationState {
   readonly playerColor : PlayerColor
   readonly startPlayer : Player
   readonly lastPlayer : Player
+  readonly planningMarker : number
 
   readonly movementRoll : number
   readonly locationRoll: number
@@ -55,6 +56,8 @@ export default class NavigationState {
       this.movementRoll = rollDice(8)
       this.locationRoll = rollDice(8)
     }
+
+    this.planningMarker = Math.ceil(this.turn / 2)
   }
 
 }
