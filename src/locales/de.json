@@ -1,0 +1,90 @@
+{
+  "gameTitle": "Thiefdom",
+  "home": {
+    "title": "Thiefdom Solo Helper",
+    "play1": "Spiele <a href='https://boardgamegeek.com/boardgame/361875/thiefdom' target='_blank' rel='noopener'><b>Thiefdom</b></a> mit deiner Gilde alleine gegen die Wachen.",
+    "play2": "Diese Applikation implementiert den offiziellen Solo-Modus von Thiefdom. Sie ersetzt die Patrouillentableaus und das Kompasstableau und leitet dich durch das Spiel.",
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Spielaufbau",
+    "players": {
+      "title": "Gilden",
+      "playerColor": "Deine Gilde",
+      "botColor": "Gegnerische Gilde"
+    },
+    "setup": {
+      "title": "Aufbau",
+      "gameBoard": "Bereite das Spiel wie ein 2-Spieler-Spiel vor.",
+      "playerBoard": "Wie üblich nimmst du ein Spielertableau und die Materialien in der Farbe deiner Gilde . Lege jedoch das Planungsplättchen Nr. 4 zurück in die Schachtel.",
+      "rivalThieves": "Lege 3 gegnerische Diebe neben den Spielplan.",
+      "draftEquipment": "Um Ausrüstungen auszuwählen, ziehe zuerst 3 Karten vom Deck und behalte 1 davon. Ziehe nun 2 Karten vom Deck, behalte wieder 1 und dann ziehe noch eine weitere Karte vom Deck. Von den 3 Ausrüstungen kannst du nun 0–2 kaufen und sie beliebig unter deinen Dieben verteilen.",
+      "placeHideout": "Dann platziere deinen Versteckmarker."
+    },
+    "ruleChanges": {
+      "title": "Regeländerungen im Solospiel",
+      "townsfolkMovement": "Die Bewegungen der Stadtbewohner und der gegnerischen Diebe werden von der Applikation bestimmt.",
+      "enterLocationRival": "Wenn du einen Ort mit einem gegnerischen Dieb betrittst, <b>verlierst du 1 SP</b> pro gegnerischen Dieb an diesem Ort.",
+      "getArrested": "Wenn du in einem Solospiel verhaftet wirst, werden die Waren <b>abgeworfen</b> und nicht in den Kerker gelegt."
+    }
+  },
+  "roundStart": {
+    "title": "Planung",
+    "planningTokens": "Plane die Reihenfolge, in der die Diebe die Aktionen ausführen werden, indem du die Planungsplättchen offen auf dein Spielertableau legst."
+  },
+  "turnPlayer": {
+    "title": "Spieler",
+    "takeTurn": "Führe deinen Zug aus: Planungsplättchen Nr. {number}."
+  },
+  "turnBot": {
+    "title": "Stadtbewohner",
+    "compassInstruction": "Bewege die Figur in die angegebene Richtung. Wenn sie sich aus irgendeinem Grund nicht in diese Richtung bewegen kann (Mauer, Haus/Ort, Sackgasse oder weil die Wache nicht rückwärts gehen kann), folge einer alternativen Richtung in Reihenfolge des Pfeils. Schwenke auf die ursprünglich angegebene Richtung zurück wann immer möglich."
+  },
+  "roundEnd": {
+    "title": "Verwaltung",
+    "roundMarker": "Setze den <b>Rundenmarker</b> auf die nächste Stelle.",
+    "staminaMarker": "Lege den <b>Ausdauermarker</b> zurück.",
+    "alleySpace": "Erhalte 1 SP für jeden Dieb auf einem <b>Gassenfeld</b>.",
+    "round24": {
+      "title": "Außerdem:",
+      "bagTokens": "Drehe die <b>Taschenplättchen</b> der Adligen auf dem Beutetableau auf die Seite mit den abgebildeten Waren.",
+      "lootBoard": "Fülle das Beutetableau wieder mit <b>Abzeichen</b> aus dem Vorrat auf, und zwar ein Abzeichen pro vorgesehenem Platz.",
+      "smugglingMission": "Lege jeweils 1 <b>Schmuggelauftrag</b> vom Stapel auf die leeren Felder der Schmugglerinnen.",
+      "equipmentCards": "Die ausliegenden <b>Ausrüstungskarten</b> werden abgeworfen und durch 4 Karten vom Deck ersetzt."
+    }
+  },
+  "endOfGame": {
+    "title": "Spielende",
+    "finalScore": "Zähle deine SP zusammen und prüfe anhand dieser Tabelle, wie gut die abgeschnitten hast:",
+    "vp": "{count}+ SP"
+  },
+  "sideBar": {
+    "round": "Runde {round}",
+    "turn": "Zug {turn}"
+  },
+  "notfound": {
+    "title": "Nicht Gefunden"
+  },
+  "action": {
+    "playGame": "Spielen",
+    "startGame": "Spiel starten",
+    "next": "Weiter",
+    "nextRound": "Nächste Runde",
+    "abortGame": "Spiel abbrechen",
+    "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist du sicher?",
+    "endGame": "Spiel beenden",
+    "endGameConfirm": "Dieses Spiel wird beendet - bist du sicher?",
+    "cancel": "Abbrechen",
+    "backToHome": "Zurück zum Anfang",
+    "back": "Zurück",
+    "close": "Schließen",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Applikation neu laden",
+    "notice": "Die Applikation wurde aktualisiert - möchtest du die Seite neu laden um die neueste Version zu nutzen?"
+  }
+}
