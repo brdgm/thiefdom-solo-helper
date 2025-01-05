@@ -1,10 +1,11 @@
-import { State, Turn } from '@/store/state'
+import { CityBoardSetup, State, Turn } from '@/store/state'
 import { RouteLocation } from 'vue-router'
 import getIntRouteParam from '@brdgm/brdgm-commons/src/util/router/getIntRouteParam'
 import Player from '@/services/enum/Player'
 import PlayerColor from '@/services/enum/PlayerColor'
 import CardDeck from '@/services/CardDeck'
 import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
+import MapRandomizer from '@/services/MapRandomizer'
 
 export default class NavigationState {
 
@@ -19,6 +20,7 @@ export default class NavigationState {
   readonly movementRoll : number
   readonly locationRoll: number
   readonly cardDeck : CardDeck
+  readonly cityBoardSetup : CityBoardSetup[]
 
   constructor(route: RouteLocation, state: State) {    
     this.round = getIntRouteParam(route, 'round')
@@ -58,6 +60,7 @@ export default class NavigationState {
     }
 
     this.planningMarker = Math.ceil(this.turn / 2)
+    this.cityBoardSetup = state.setup.cityBoardSetup ?? MapRandomizer.new().cityBoardSetup
   }
 
 }
