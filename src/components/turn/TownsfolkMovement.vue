@@ -82,7 +82,8 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   .icon {
-    height: 100px;
+    height: 90px;
+    margin: 5px;
     @media (max-width: 600px) {
       height: 75px;
     }
