@@ -52,7 +52,7 @@
   "roundEnd": {
     "title": "Verwaltung",
     "roundMarker": "Setze den <b>Rundenmarker</b> auf die nächste Stelle.",
-    "staminaMarker": "Lege den <b>Ausdauermarker</b> zurück.",
+    "staminaMarker": "Lege den <b>Ausdauermarker</b> zurück und sammle deine <b>Planungsplättchen</b> ein.",
     "alleySpace": "Erhalte 1 SP für jeden Dieb auf einem <b>Gassenfeld</b>.",
     "round24": {
       "title": "Außerdem:",
