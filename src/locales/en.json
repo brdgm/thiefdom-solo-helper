@@ -52,7 +52,7 @@
   "roundEnd": {
     "title": "Administration",
     "roundMarker": "Advance the <b>round marker</b>.",
-    "staminaMarker": "Return the <b>stamina marker</b>.",
+    "staminaMarker": "Return the <b>stamina marker</b> and collect your <b>planning tokens<b/>.",
     "alleySpace": "Receive 1 VP for each thief you have on an <b>alley space</b>.",
     "round24": {
       "title": "Additionally:",
