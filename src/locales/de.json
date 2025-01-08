@@ -3,7 +3,7 @@
   "home": {
     "title": "Thiefdom Solo Helper",
     "play1": "Spiele <a href='https://boardgamegeek.com/boardgame/361875/thiefdom' target='_blank' rel='noopener'><b>Thiefdom</b></a> mit deiner Gilde alleine gegen die Wachen.",
-    "play2": "Diese Applikation implementiert den offiziellen Solo-Modus von Thiefdom. Sie ersetzt die Patrouillentableaus und das Kompasstableau und leitet dich durch das Spiel.",
+    "play2": "Diese Applikation implementiert den offiziellen Solo-Modus von Thiefdom. Sie ersetzt die Patrouillentableaus und das Kompasstableau und leitet dich durch das Spiel. Der Zufallsgenerator für die Stadtteile schafft für jedes Spiel eine neue Herausforderung und hilft die gegnerischen Diebe zu navigieren.",
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
