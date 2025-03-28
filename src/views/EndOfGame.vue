@@ -1,7 +1,5 @@
 <template>
-  <h1>
-    {{t('endOfGame.title')}}
-  </h1>
+  <h1 class="mb-4">{{t('endOfGame.title')}}</h1>
 
   <FinalScoring :amount="amount"/>
 

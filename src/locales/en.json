@@ -65,8 +65,7 @@
   "endOfGameAmounts": {
     "title": "End of Game: Amounts",
     "vp": "VP",
-    "count": "Count",
-    "amount": "Amount"
+    "count": "Count"
   },
   "endOfGame": {
     "title": "End of Game",

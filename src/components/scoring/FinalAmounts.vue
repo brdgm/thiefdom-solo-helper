@@ -13,7 +13,7 @@
       <tr>
         <th scope="row">
           <AppIcon type="final-scoring" name="gold" class="icon small"/>
-          <span v-html="t('endOfGameAmounts.amount')"></span>
+          <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
           <input type="number" min="0" step="1" v-model="amount.money" @focus="inputSelectAll"/>
@@ -31,7 +31,7 @@
       <tr>
         <th scope="row">
           <AppIcon type="final-scoring" name="liquor" class="icon small"/>
-          <span v-html="t('endOfGameAmounts.amount')"></span>
+          <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
           <input type="number" min="0" step="1" v-model="amount.liquorCount" @focus="inputSelectAll"/>
@@ -40,7 +40,7 @@
       <tr>
         <th scope="row">
           <AppIcon type="final-scoring" name="badge" class="icon small"/>
-          <span v-html="t('endOfGameAmounts.amount')"></span>
+          <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
           <input type="number" min="0" step="1" v-model="amount.badgeCount" @focus="inputSelectAll"/>
@@ -49,7 +49,7 @@
       <tr>
         <th scope="row">
           <AppIcon type="final-scoring" name="wine" class="icon small"/>
-          <span v-html="t('endOfGameAmounts.amount')"></span>
+          <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
           <input type="number" min="0" step="1" v-model="amount.wineCount" @focus="inputSelectAll"/>
@@ -58,7 +58,7 @@
       <tr>
         <th scope="row">
           <AppIcon type="final-scoring" name="oil-painting" class="icon small"/>
-          <span v-html="t('endOfGameAmounts.amount')"></span>
+          <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
           <input type="number" min="0" step="1" v-model="amount.oilPaintingCount" @focus="inputSelectAll"/>
