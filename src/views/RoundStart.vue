@@ -18,7 +18,7 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useStateStore } from '@/store/state'
 import SideBar from '@/components/turn/SideBar.vue'
 import NavigationState from '@/util/NavigationState'
@@ -31,13 +31,14 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
+    const router = useRouter()
     const route = useRoute()
     const state = useStateStore()
 
     const navigationState = new NavigationState(route, state)
     const { round, turn } = navigationState
 
-    return { t, state, navigationState, round, turn }
+    return { t, router, state, navigationState, round, turn }
   },
   computed: {
     backButtonRouteTo() : string {
@@ -49,7 +50,7 @@ export default defineComponent({
   },
   methods: {
     next() : void {
-      this.$router.push(`/round/${this.round}/turn/1/${this.navigationState.startPlayer}`)
+      this.router.push(`/round/${this.round}/turn/1/${this.navigationState.startPlayer}`)
     }
   }
 })

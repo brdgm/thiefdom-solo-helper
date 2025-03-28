@@ -19,6 +19,7 @@ export const useStateStore = defineStore(`${name}.state`, {
   actions: {
     resetGame() {
       this.rounds = []
+      this.finalScoringAmount = undefined
     },
     storeTurn(turn : Turn) {
       let round = this.rounds.find(item => item.round === turn.round)
@@ -38,6 +39,7 @@ export interface State {
   baseFontSize: number
   setup: Setup
   rounds: Round[]
+  finalScoringAmount?: FinalScoringAmount
 }
 export interface Setup {
   playerColors: PlayerColor[]
@@ -65,4 +67,16 @@ export interface Turn {
 export interface CardDeckPersistence {
   pile: number[]
   discard: number[]
+}
+
+export interface FinalScoringAmount {
+  scoringTrackVP?: number
+  money?: number
+  jewelCount?: number
+  liquorCount?: number
+  badgeCount?: number
+  wineCount?: number
+  oilPaintingCount?: number
+  friendVP?: number
+  thiefHideoutCount?: number
 }

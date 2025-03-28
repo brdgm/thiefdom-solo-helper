@@ -62,10 +62,17 @@
       "equipmentCards": "The <b>equipment cards</b> on display are discarded and replaced with 4 cards from the deck."
     }
   },
+  "endOfGameAmounts": {
+    "title": "End of Game: Amounts",
+    "vp": "VP",
+    "count": "Count",
+    "amount": "Amount"
+  },
   "endOfGame": {
     "title": "End of Game",
-    "finalScore": "Add up your VP and check against this table to see how well you did:",
-    "vp": "{count}+ VP"
+    "finalScore": "Your final score:",
+    "scoreTable": "Compare your score to this table:",
+    "vp": "{count} VP"
   },
   "sideBar": {
     "round": "Round {round}",
