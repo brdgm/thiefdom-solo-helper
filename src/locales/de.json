@@ -62,10 +62,16 @@
       "equipmentCards": "Die ausliegenden <b>Ausrüstungskarten</b> werden abgeworfen und durch 4 Karten vom Deck ersetzt."
     }
   },
+  "endOfGameAmounts": {
+    "title": "Spielende: Anzahl",
+    "vp": "SP",
+    "count": "Anzahl"
+  },
   "endOfGame": {
     "title": "Spielende",
-    "finalScore": "Zähle deine SP zusammen und prüfe anhand dieser Tabelle, wie gut die abgeschnitten hast:",
-    "vp": "{count}+ SP"
+    "finalScore": "Deine Punktezahl:",
+    "scoreTable": "Prüfe anhand dieser Tabelle, wie gut die abgeschnitten hast:",
+    "vp": "{count} SP"
   },
   "sideBar": {
     "round": "Runde {round}",

@@ -25,7 +25,7 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { Turn, useStateStore } from '@/store/state'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import SideBar from '@/components/turn/SideBar.vue'
 import NavigationState from '@/util/NavigationState'
 import DebugInfo from '@/components/turn/DebugInfo.vue'
@@ -44,13 +44,14 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
+    const router = useRouter()
     const route = useRoute()
     const state = useStateStore()
 
     const navigationState = new NavigationState(route, state)
     const { round, turn } = navigationState
 
-    return { t, state, navigationState, round, turn }
+    return { t, router, state, navigationState, round, turn }
   },
   computed: {
     backButtonRouteTo() : string {
@@ -75,14 +76,14 @@ export default defineComponent({
       this.state.storeTurn(turn)
       if (this.turn == 6) {
         if (this.round == 6) {
-          this.$router.push(`/endOfGame`)
+          this.router.push(`/endOfGameAmounts`)
         }
         else {
-          this.$router.push(`/round/${this.round}/end`)
+          this.router.push(`/round/${this.round}/end`)
         }
       }
       else {
-        this.$router.push(`/round/${this.round}/turn/${this.turn+1}/player`)
+        this.router.push(`/round/${this.round}/turn/${this.turn+1}/player`)
       }
     }
   }
