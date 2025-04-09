@@ -101,6 +101,7 @@ import { useStateStore, FinalScoringAmount } from '@/store/state'
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
+import toNumber from '@brdgm/brdgm-commons/src/util/form/toNumber'
 
 export default defineComponent({
   name: 'FinalScoring',
@@ -123,15 +124,15 @@ export default defineComponent({
   },
   computed: {
     totalVP() : number {
-      return this.toNumber(this.amount.scoringTrackVP)
-          + Math.floor(this.toNumber(this.amount.money) / 4)
-          + Math.floor(this.toNumber(this.amount.jewelCount) / 2)
-          + Math.floor(this.toNumber(this.amount.liquorCount) / 2)
-          + this.toNumber(this.amount.badgeCount)
-          + this.toNumber(this.amount.wineCount)
-          + (this.toNumber(this.amount.oilPaintingCount) * 3)
-          + this.toNumber(this.amount.friendVP)
-          + this.toNumber(this.amount.thiefHideoutCount)
+      return toNumber(this.amount.scoringTrackVP)
+          + Math.floor(toNumber(this.amount.money) / 4)
+          + Math.floor(toNumber(this.amount.jewelCount) / 2)
+          + Math.floor(toNumber(this.amount.liquorCount) / 2)
+          + toNumber(this.amount.badgeCount)
+          + toNumber(this.amount.wineCount)
+          + (toNumber(this.amount.oilPaintingCount) * 3)
+          + toNumber(this.amount.friendVP)
+          + toNumber(this.amount.thiefHideoutCount)
     },
     starVP() : number[] {
       return [30, 40, 50, 60, 70]
@@ -146,14 +147,7 @@ export default defineComponent({
     }
   },
   methods: {
-    toNumber(value? : number) {
-      if (typeof value == 'string') {
-        return 0
-      }
-      else {
-        return value ?? 0
-      }
-    }
+    toNumber
   }
 })
 </script>
