@@ -61,7 +61,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.oilPaintingCount"/>
+          <ScoringTextInput v-model="amount.oilPaintingCount" :max="4"/>
         </td>
       </tr>
       <tr>
@@ -81,7 +81,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.thiefHideoutCount"/>
+          <ScoringTextInput v-model="amount.thiefHideoutCount" :max="3"/>
         </td>
       </tr>
     </tbody>
