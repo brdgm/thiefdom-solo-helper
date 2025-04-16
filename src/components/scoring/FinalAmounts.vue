@@ -7,7 +7,7 @@
           <span v-html="t('endOfGameAmounts.vp')"></span>
         </th>
         <td>
-          <input type="number" min="0" step="1" v-model="amount.scoringTrackVP" @focus="inputSelectAll"/>
+          <NumberInput v-model="amount.scoringTrackVP"/>
         </td>
       </tr>
       <tr>
@@ -16,7 +16,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <input type="number" min="0" step="1" v-model="amount.money" @focus="inputSelectAll"/>
+          <NumberInput v-model="amount.money"/>
         </td>
       </tr>
       <tr>
@@ -25,7 +25,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <input type="number" min="0" step="1" v-model="amount.jewelCount" @focus="inputSelectAll"/>
+          <NumberInput v-model="amount.jewelCount"/>
         </td>
       </tr>
       <tr>
@@ -34,7 +34,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <input type="number" min="0" step="1" v-model="amount.liquorCount" @focus="inputSelectAll"/>
+          <NumberInput v-model="amount.liquorCount"/>
         </td>
       </tr>
       <tr>
@@ -43,7 +43,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <input type="number" min="0" step="1" v-model="amount.badgeCount" @focus="inputSelectAll"/>
+          <NumberInput v-model="amount.badgeCount"/>
         </td>
       </tr>
       <tr>
@@ -52,7 +52,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <input type="number" min="0" step="1" v-model="amount.wineCount" @focus="inputSelectAll"/>
+          <NumberInput v-model="amount.wineCount"/>
         </td>
       </tr>
       <tr>
@@ -61,7 +61,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <input type="number" min="0" step="1" v-model="amount.oilPaintingCount" @focus="inputSelectAll"/>
+          <NumberInput v-model="amount.oilPaintingCount" :max="4"/>
         </td>
       </tr>
       <tr>
@@ -71,7 +71,7 @@
           <span v-html="t('endOfGameAmounts.vp')"></span>
         </th>
         <td>
-          <input type="number" min="0" step="1" v-model="amount.friendVP" @focus="inputSelectAll"/>
+          <NumberInput v-model="amount.friendVP"/>
         </td>
       </tr>
       <tr>
@@ -81,7 +81,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <input type="number" min="0" step="1" v-model="amount.thiefHideoutCount" @focus="inputSelectAll"/>
+          <NumberInput v-model="amount.thiefHideoutCount" :max="3"/>
         </td>
       </tr>
     </tbody>
@@ -99,11 +99,13 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
 import { useRouter } from 'vue-router'
+import NumberInput from '@brdgm/brdgm-commons/src/components/form/NumberInput.vue'
 
 export default defineComponent({
   name: 'FinalAmounts',
   components: {
-    AppIcon
+    AppIcon,
+    NumberInput
   },
   setup() {
     const { t } = useI18n()
@@ -115,21 +117,9 @@ export default defineComponent({
     return { t, state, router, amount }
   },
   methods: {
-    inputSelectAll(event: Event) : void {
-      const input = event.target as HTMLInputElement
-      input.select()
-    },
-    toNumber(value? : number) {
-      if (typeof value == 'string') {
-        return 0
-      }
-      else {
-        return value ?? 0
-      }
-    },
     next() : void {
       this.state.finalScoringAmount = this.amount
-      this.router.push(`/endOfGame`)
+      this.router.push('/endOfGame')
     }
   }
 })
