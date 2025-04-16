@@ -7,7 +7,7 @@
           <span v-html="t('endOfGameAmounts.vp')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.scoringTrackVP"/>
+          <NumberInput v-model="amount.scoringTrackVP"/>
         </td>
       </tr>
       <tr>
@@ -16,7 +16,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.money"/>
+          <NumberInput v-model="amount.money"/>
         </td>
       </tr>
       <tr>
@@ -25,7 +25,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.jewelCount"/>
+          <NumberInput v-model="amount.jewelCount"/>
         </td>
       </tr>
       <tr>
@@ -34,7 +34,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.liquorCount"/>
+          <NumberInput v-model="amount.liquorCount"/>
         </td>
       </tr>
       <tr>
@@ -43,7 +43,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.badgeCount"/>
+          <NumberInput v-model="amount.badgeCount"/>
         </td>
       </tr>
       <tr>
@@ -52,7 +52,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.wineCount"/>
+          <NumberInput v-model="amount.wineCount"/>
         </td>
       </tr>
       <tr>
@@ -61,7 +61,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.oilPaintingCount" :max="4"/>
+          <NumberInput v-model="amount.oilPaintingCount" :max="4"/>
         </td>
       </tr>
       <tr>
@@ -71,7 +71,7 @@
           <span v-html="t('endOfGameAmounts.vp')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.friendVP"/>
+          <NumberInput v-model="amount.friendVP"/>
         </td>
       </tr>
       <tr>
@@ -81,7 +81,7 @@
           <span v-html="t('endOfGameAmounts.count')"></span>
         </th>
         <td>
-          <ScoringTextInput v-model="amount.thiefHideoutCount" :max="3"/>
+          <NumberInput v-model="amount.thiefHideoutCount" :max="3"/>
         </td>
       </tr>
     </tbody>
@@ -99,13 +99,13 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
 import { useRouter } from 'vue-router'
-import ScoringTextInput from '@brdgm/brdgm-commons/src/components/form/ScoringTextInput.vue'
+import NumberInput from '@brdgm/brdgm-commons/src/components/form/NumberInput.vue'
 
 export default defineComponent({
   name: 'FinalAmounts',
   components: {
     AppIcon,
-    ScoringTextInput
+    NumberInput
   },
   setup() {
     const { t } = useI18n()
@@ -117,14 +117,6 @@ export default defineComponent({
     return { t, state, router, amount }
   },
   methods: {
-    toNumber(value? : number) {
-      if (typeof value == 'string') {
-        return 0
-      }
-      else {
-        return value ?? 0
-      }
-    },
     next() : void {
       this.state.finalScoringAmount = this.amount
       this.router.push('/endOfGame')
