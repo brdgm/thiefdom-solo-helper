@@ -20,6 +20,7 @@ export const useStateStore = defineStore(`${name}.state`, {
     resetGame() {
       this.rounds = []
       this.finalScoringAmount = undefined
+      this.gameStatsSend = false
     },
     storeTurn(turn : Turn) {
       let round = this.rounds.find(item => item.round === turn.round)
@@ -40,6 +41,7 @@ export interface State {
   setup: Setup
   rounds: Round[]
   finalScoringAmount?: FinalScoringAmount
+  gameStatsSend?: boolean
 }
 export interface Setup {
   playerColors: PlayerColor[]
