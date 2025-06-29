@@ -102,6 +102,8 @@ import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
 import toNumber from '@brdgm/brdgm-commons/src/util/form/toNumber'
+import postGameStats from '@/util/postGameStats'
+import { version } from '@/../package.json'
 
 export default defineComponent({
   name: 'FinalScoring',
@@ -148,6 +150,12 @@ export default defineComponent({
   },
   methods: {
     toNumber
+  },
+  mounted() {
+    const { totalVP } = this
+    postGameStats({version,totalVP,...this.amount},
+      import.meta.env.VITE_STATS_FORM_URL,
+      import.meta.env.VITE_STATS_FIELD_MAPPING)
   }
 })
 </script>
