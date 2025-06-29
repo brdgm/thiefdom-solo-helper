@@ -102,7 +102,7 @@ import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
 import toNumber from '@brdgm/brdgm-commons/src/util/form/toNumber'
-import postGameStats from '@/util/postGameStats'
+import postGameStats from '@brdgm/brdgm-commons/src/util/stats/postGameStats'
 import { version } from '@/../package.json'
 
 export default defineComponent({
@@ -152,10 +152,14 @@ export default defineComponent({
     toNumber
   },
   mounted() {
-    const { totalVP } = this
-    postGameStats({version,totalVP,...this.amount},
-      import.meta.env.VITE_STATS_FORM_URL,
-      import.meta.env.VITE_STATS_FIELD_MAPPING)
+    // send anonymous game stats - max. once per game
+    if (!this.state.gameStatsSend) {
+      const { totalVP } = this
+      postGameStats({version,totalVP,...this.amount},
+        import.meta.env.VITE_STATS_FORM_URL,
+        import.meta.env.VITE_STATS_FIELD_MAPPING)
+      this.state.gameStatsSend = true
+    }
   }
 })
 </script>
