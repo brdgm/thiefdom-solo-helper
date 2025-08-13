@@ -11,7 +11,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { CityBoardSetup } from '@/store/state'
-import CityBoard from '@/services/enum/CityBoard';
+import CityBoard from '@/services/enum/CityBoard'
 
 export default defineComponent({
   name: 'MapDisplay',
