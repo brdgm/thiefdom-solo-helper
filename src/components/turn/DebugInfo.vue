@@ -12,7 +12,7 @@
 import { defineComponent } from 'vue'
 import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
-import CardDeck from '@/services/CardDeck';
+import CardDeck from '@/services/CardDeck'
 
 export default defineComponent({
   name: 'DebugInfo',

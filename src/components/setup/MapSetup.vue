@@ -14,7 +14,7 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import MapRandomizer from '@/services/MapRandomizer'
-import MapDisplay from '../structure/MapDisplay.vue';
+import MapDisplay from '../structure/MapDisplay.vue'
 
 export default defineComponent({
   name: 'MapSetup',
