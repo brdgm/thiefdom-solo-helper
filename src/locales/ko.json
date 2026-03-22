@@ -1,0 +1,105 @@
+{
+  "gameTitle": "도둑들의 도시",
+  "home": {
+    "title": "도둑들의 도시 솔로 헬퍼",
+    "play1": "경비병들과 맞서 혼자서 <a href='https://boardgamegeek.com/boardgame/361875/thiefdom' target='_blank' rel='noopener'><b>도둑들의 도시</b></a>를 플레이하세요.",
+    "play2": "이 앱은 도둑들의 도시의 공식 솔로 모드를 구현합니다. 솔로 순찰 보드와 나침반을 대체하고 게임을 안내합니다. 도시 보드 무작위 배치는 매번 다른 도전을 설정하고 라이벌 도둑들을 탐색하는 데 도움을 줍니다.",
+    "feedback": "토론 및 피드백:"
+  },
+  "setup": {
+    "title": "게임 설정",
+    "players": {
+      "title": "길드",
+      "playerColor": "플레이어 길드",
+      "botColor": "라이벌 길드"
+    },
+    "map": {
+      "title": "도시 보드",
+      "arrange": "도시 보드를 다음과 같이 배치하세요:",
+      "randomize": "무작위 배치",
+      "tutorialSetup": "튜토리얼 설정"
+    },
+    "setup": {
+      "title": "컴포넌트",
+      "gameBoard": "2인 게임처럼 게임을 설정하세요. 순찰 보드는 필요하지 않습니다.",
+      "playerBoard": "평소와 같이 플레이어 보드와 길드 색상의 재료를 가져가세요. 하지만 계획 토큰 #4는 상자에 반납하세요.",
+      "rivalThieves": "라이벌 도둑 3명을 보드 옆에 배치하세요.",
+      "draftEquipment": "장비를 드래프트하려면 먼저 3장을 뽑아 그 중 1장을 선택한 다음, 2장을 뽑아 다시 1장을 선택하고, 덱에서 마지막 1장을 뽑으세요.",
+      "buyEquipment": "3개의 장비 중에서 0-2개의 장비를 구매하고 원하는 대로 도둑들에게 분배할 수 있습니다.",
+      "gainEquipmentVP": "구매한 장비에 표시된 승점을 받으세요.",
+      "placeHideout": "그 다음 아지트를 배치하세요."
+    },
+    "ruleChanges": {
+      "title": "솔로 게임 규칙 변경",
+      "townsfolkMovement": "시민과 라이벌 도둑의 이동은 앱에서 제어됩니다.",
+      "enterLocationRival": "라이벌 도둑이 있는 장소에 들어가면 그 장소에 있는 라이벌 도둑 1명당 <b>승점 1점을 잃습니다</b>.",
+      "getArrested": "솔로 게임에서 체포되면 물품은 지하감옥에 배치되지 않고 <b>버려집니다</b>."
+    }
+  },
+  "roundStart": {
+    "title": "계획",
+    "planningTokens": "계획 토큰을 플레이어 보드에 앞면이 보이게 배치하여 도둑들이 행동을 수행할 순서를 계획하세요."
+  },
+  "turnPlayer": {
+    "title": "플레이어",
+    "takeTurn": "턴을 진행하세요: 계획 마커 #{number}."
+  },
+  "turnBot": {
+    "title": "시민",
+    "showCompassInstructions": "이동 규칙",
+    "compassInstruction": "표시된 방향으로 피규어를 이동시키세요. 이 방향으로 이동할 수 없다면 (벽, 집/장소, 막다른 길이거나 경비병이 뒤로 이동할 수 없는 경우) 화살표를 따라 대안 방향으로 이동시키세요. 가능할 때마다 표시된 방향으로 돌아가세요."
+  },
+  "roundEnd": {
+    "title": "관리",
+    "roundMarker": "<b>라운드 마커</b>를 전진시키세요.",
+    "staminaMarker": "<b>체력 마커</b>를 반환하고 <b>계획 토큰</b>을 회수하세요.",
+    "alleySpace": "<b>골목 공간</b>에 있는 도둑 1명당 승점 1점을 받으세요.",
+    "round24": {
+      "title": "추가로:",
+      "bagTokens": "전리품 보드의 귀족들의 <b>가방 토큰</b>을 물품이 표시된 면으로 뒤집으세요.",
+      "lootBoard": "공급처에서 <b>배지</b>로 전리품 보드를 다시 채워 지정된 칸당 배지 1개가 되도록 하세요.",
+      "smugglingMission": "비어있는 밀수업자의 지정 칸마다 덱에서 <b>밀수 임무</b> 1장을 배치하세요.",
+      "equipmentCards": "전시된 <b>장비 카드</b>를 버리고 덱에서 4장으로 교체하세요."
+    }
+  },
+  "endOfGameAmounts": {
+    "title": "게임 종료: 수량",
+    "vp": "승점",
+    "count": "개수"
+  },
+  "endOfGame": {
+    "title": "게임 종료",
+    "finalScore": "최종 점수:",
+    "scoreTable": "점수를 이 표와 비교하세요:",
+    "vp": "승점 {count}점"
+  },
+  "sideBar": {
+    "round": "라운드 {round}",
+    "turn": "턴 {turn}"
+  },
+  "notfound": {
+    "title": "찾을 수 없음"
+  },
+  "action": {
+    "playGame": "게임 플레이",
+    "startGame": "게임 시작",
+    "next": "다음",
+    "nextRound": "다음 라운드",
+    "abortGame": "게임 중단",
+    "abortGameConfirm": "진행 중인 게임을 중단합니다 - 확실합니까?",
+    "endGame": "게임 종료",
+    "endGameConfirm": "이 게임을 종료하고 홈 화면으로 돌아갑니다 - 확실합니까?",
+    "cancel": "취소",
+    "backToHome": "홈으로 돌아가기",
+    "back": "뒤로",
+    "close": "닫기",
+    "ok": "확인"
+  },
+  "footer": {
+    "credits": "크레딧"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "앱 새로고침",
+    "notice": "앱이 업데이트되었습니다 - 최신 버전을 사용하기 위해 새로고침하시겠습니까?"
+  }
+}
